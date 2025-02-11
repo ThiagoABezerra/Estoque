@@ -1,5 +1,5 @@
 from django.contrib import admin
-from controle.models import Epi, Produto, Usuario, Departamento
+from Estoque.models import Epi, Produto, Usuario, Departamento
 
 class EpiAdmin(admin.ModelAdmin):
     list_display = ('name', 'ca','tamanho')
