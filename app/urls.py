@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from Estoque.views import epi_view, new_epi_view, excluir_epi
+from controle.views import epi_view, new_epi_view, excluir_epi
 
 
 urlpatterns = [

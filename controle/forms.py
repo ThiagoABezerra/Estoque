@@ -1,5 +1,5 @@
 from django import forms
-from Estoque.models import Epi
+from controle.models import Epi
 
 class EpiFrom(forms.ModelForm):
     class Meta:

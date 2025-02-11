@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from Estoque.models import Epi
-from Estoque.forms import EpiFrom
+from controle.models import Epi
+from controle.forms import EpiFrom
 from django.contrib import messages
 
 
