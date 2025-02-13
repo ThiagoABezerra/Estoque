@@ -1,4 +1,5 @@
 {%extends "base.html"%}
+
 <br>
 <br>
 
@@ -15,8 +16,8 @@
 
 <body>    
         {% block content %}
-        
-        <h1>Lista de EPI</h1> 
+        <br>
+        <h1>Epi Cadastrado</h1> 
         <br>
         <form method="GET" action="{% url 'epis_list'%}" class="d-flex" role="search">
             <input class="form-control me-2" type="text" name = "search" placeholder="Buscar Epi" aria-label="Search">
@@ -43,7 +44,8 @@
                         <td>{{ epis.estoque }}</td>
                         <td>   
                         <!-- Botão de Editar -->
-                        <a href="#" class="btn btn-success btn-sm">
+
+                        <a href= "{% url 'editar_epi' epis.pk %}" class="btn btn-success btn-sm">
                             <i class="fas fa-edit"></i> Editar
                         </a>    
                         <!-- Botão de Excluir -->

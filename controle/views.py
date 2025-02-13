@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from controle.models import Epi
 from controle.forms import EpiFrom
 from django.contrib import messages
+from django.views.generic import UpdateView
 
 
 def epi_view(request):
@@ -31,3 +32,13 @@ def excluir_epi(request, id):
         messages.success(request, f'O item "{Epi.name}" foi excluído com sucesso!')
         return redirect('epis_list')
     return render(request, 'confirmar_exclusao_epi.html', {'epi_excluir': epi_excluir})
+
+    
+
+class EpiUpdateView(UpdateView):
+     model = Epi
+     form_class = EpiFrom
+     template_name = 'editar_epi.html'
+     #Direciona para lista de epis
+     success_url =  '/epis/' 
+    
